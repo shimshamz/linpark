@@ -1,0 +1,107 @@
+.event-item {
+  --text-color: #222;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 0.6rem;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+
+    .event-item__link {
+      &-icon {
+        fill: $color-red;
+      }
+    }
+  }
+
+  &__thumbnail {
+    height: 40vw;
+    min-height: 215px;
+    background-color: darkgray;
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (min-width: 576px) {
+      height: 30vw;
+      min-height: 180px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      height: 25vw;
+      min-height: 200px;
+    }
+
+    @media only screen and (min-width: 992px) {
+      height: 15vw;
+      min-height: 210px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      height: 210px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0rem 0rem;
+  }
+
+  .event-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 5.2rem;
+    margin-right: 1.4rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    &__day {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    &__month {
+      margin-right: 0.3rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__name {
+    --line-height: 2.4rem;
+
+    @include line-clamp(2);
+
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+    line-height: var(--line-height);
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    margin-left: auto;
+    padding: 0rem 0.6rem;
+  }
+
+  &__link-icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--text-color);
+    transition: all 0.15s ease-in-out;
+  }
+}

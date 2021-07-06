@@ -1,0 +1,106 @@
+/* ========== FOOTER ========== */
+
+.footer {
+  width: 100%;
+  padding: 3rem 0rem 0rem;
+  color: $color-light;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: $color-red;
+
+  @media only screen and (min-width: 992px) {
+    font-size: 1.6rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &-content-wrapper {
+    max-width: 700px;
+
+    @media only screen and (min-width: 992px) {
+      max-width: 1200px;
+    }
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @media only screen and (min-width: 992px) {
+        font-size: 2rem;
+      }
+    }
+
+    &__body {
+      height: 100%;
+      margin-bottom: 2rem;
+
+      .footer__logo:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &-menu__list {
+    list-style: none;
+
+    .menu-item {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 120px;
+
+    &--school-logo {
+      max-width: 350px;
+      margin: 0 auto 3rem;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact-list {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    @media only screen and (min-width: 992px) {
+      margin-bottom: 3rem;
+    }
+
+    &__item {
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .copyright {
+    padding: 2.2rem 0rem;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    &__text {
+      margin-bottom: 0rem;
+      padding: 0rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,253 @@
+#linpark-front {
+  section:nth-child(odd) {
+    background-color: $color-light-grey;
+  }
+
+  /* ========== HERO SECTION ========== */
+  .hero {
+    .hero-slide {
+      width: 100%;
+      padding: 4rem 2rem;
+      color: $color-light;
+      background-size: cover;
+      background-position: center;
+
+      @media only screen and (min-width: 768px) {
+        padding: 5rem 4.5rem;
+      }
+
+      &__heading {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+
+        @media only screen and (min-width: 768px) {
+          font-size: 2.4rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+          font-size: 3.2rem;
+        }
+      }
+
+      &__copy {
+        margin-bottom: 1.6rem;
+
+        @media only screen and (min-width: 768px) {
+          margin-bottom: 2rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  /* ========== ABOUT SECTION ========== */
+  .about {
+    background-color: #fff;
+
+    &__img-container {
+      margin-bottom: 1.5rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    &__img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__copy-container {
+      @media only screen and (min-width: 768px) {
+        padding: 1rem 0rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        padding: 2.5rem 0rem;
+      }
+    }
+
+    &__title {
+      margin: 0rem 0rem 1.4rem;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 400;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__copy {
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* ========== TILES SECTION ========== */
+  .tiles {
+    .section-content-wrapper {
+      --py: 6rem;
+    }
+
+    .tile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 200px;
+      margin: 1rem 0rem;
+      padding: 2rem 2.4rem;
+      position: relative;
+      // background-image: url("assets/images/img-1.jpg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.65);
+      transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      z-index: 10;
+
+      @media only screen and (min-width: 768px) {
+        margin: 1.5rem 0rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        min-height: 350px;
+        margin: 0rem;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.85);
+          transform: translateY(-0.5rem) scale(1.01);
+
+          &::before {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        transition: opacity 0.15s ease-in-out;
+        z-index: 11;
+
+        @media only screen and (min-width: 992px) {
+          background-color: rgba(0, 0, 0, 0.85);
+        }
+      }
+
+      &--red-overlay {
+        &::before {
+          background-color: rgba($color-red, 0.65);
+        }
+      }
+
+      &__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: $color-light;
+        text-transform: uppercase;
+        z-index: 12;
+
+        @media only screen and (min-width: 768px) {
+          font-size: 2.6rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  /* ========== INFO SECTION ========== */
+  .info {
+    .latest-news {
+      .post-item {
+        &__thumbnail {
+          @media only screen and (min-width: 768px) {
+            height: 100px;
+          }
+
+          @media only screen and (min-width: 992px) {
+            height: 130px;
+          }
+
+          @media only screen and (min-width: 1200px) {
+            height: 160px;
+          }
+        }
+
+        &__title {
+          @media only screen and (min-width: 768px) {
+            --line-height: 2.4rem;
+
+            -webkit-line-clamp: 3;
+            margin-bottom: 0rem;
+            font-size: 1.6rem;
+          }
+
+          @media only screen and (min-width: 992px) {
+            --line-height: 2.7rem;
+
+            -webkit-line-clamp: 2;
+            margin-bottom: 0.8rem;
+            font-size: 1.8rem;
+          }
+        }
+
+        &__excerpt {
+          margin-bottom: 0rem;
+          font-size: 1.4rem;
+
+          @media only screen and (min-width: 768px) {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+          }
+
+          @media only screen and (min-width: 992px) {
+            -webkit-line-clamp: 2;
+            font-size: 1.6rem;
+          }
+        }
+
+        &__link {
+          @media only screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+
+      &__button {
+        margin: 0.6rem 0rem 1.8rem;
+
+        @media only screen and (min-width: 992px) {
+          margin: 1.2rem 0rem 1.8rem;
+        }
+      }
+    }
+
+    .upcoming-events {
+      .event-item {
+        @media only screen and (min-width: 992px) {
+          &__thumbnail {
+            min-height: 180px;
+          }
+        }
+      }
+    }
+  }
+}

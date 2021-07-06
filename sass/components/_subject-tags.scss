@@ -1,0 +1,15 @@
+.subject-tags {
+  margin-bottom: 0rem;
+  color: #666;
+  font-size: 1.2rem;
+
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+    border: none;
+
+    &:hover {
+      color: $color-dark;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: $color-light;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: $color-dark;
+  border: 2px solid $color-dark;
+  transition: all 0.15s ease-in-out;
+
+  &--red {
+    color: $color-light;
+    background-color: $color-red;
+    border: 2px solid $color-red;
+
+    &:hover:not(&.transparent) {
+      opacity: 0.9;
+    }
+
+    &.transparent {
+      color: $color-red;
+      background-color: transparent;
+
+      &:hover {
+        color: $color-light;
+        background-color: $color-red;
+      }
+    }
+  }
+
+  &--blue {
+    color: $color-light;
+    background-color: $color-blue;
+    border: 2px solid $color-blue;
+
+    &:hover:not(&.transparent) {
+      opacity: 0.9;
+    }
+
+    &.transparent {
+      color: $color-blue;
+      background-color: transparent;
+
+      &:hover {
+        color: $color-light;
+        background-color: $color-blue;
+      }
+    }
+  }
+}
+
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: $color-light;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.15s ease-in-out;
+  color: $color-light;
+  background-color: $color-blue;
+  border: 2px solid $color-blue;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

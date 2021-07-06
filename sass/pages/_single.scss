@@ -1,0 +1,201 @@
+#linpark-single {
+  .article {
+    &__title {
+      margin-bottom: 1rem;
+      color: $color-dark;
+      font-size: 2.6rem;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 3rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &__meta {
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__date {
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__tags {
+      margin-bottom: 1.2rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__img {
+      display: block;
+      margin-bottom: 1.5rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__content {
+      margin-bottom: 2.8rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 3.4rem;
+      }
+    }
+
+    a:not(.subject-tags__link) {
+      color: $color-blue;
+      border-bottom: 1px dashed currentColor;
+    }
+
+    .event-info {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: rgba($color-blue, 0.1);
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 2rem;
+      }
+
+      &__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.8rem;
+
+        @media only screen and (min-width: 768px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 1.2rem;
+        }
+      }
+
+      &__dates,
+      &__times {
+        display: flex;
+        align-items: center;
+      }
+
+      &__dates {
+        margin-bottom: 0.6rem;
+
+        @media only screen and (min-width: 768px) {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      &__text {
+        display: inline-block;
+        margin-bottom: 0rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .sidebar {
+    &__item:not(:last-child) {
+      margin-bottom: 2.6rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 1.8rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+
+      &--accent {
+        border-bottom: 2px solid $color-blue;
+
+        span {
+          display: inline-block;
+          padding: 0.2rem 0.5rem;
+          color: $color-light;
+          background-color: $color-blue;
+        }
+      }
+    }
+
+    .post-item {
+      &__content {
+        @media only screen and (min-width: 992px) {
+          padding: 1rem;
+        }
+      }
+
+      &__thumbnail {
+        @media only screen and (min-width: 992px) {
+          flex-basis: 35%;
+          height: 100px;
+        }
+      }
+
+      &__title {
+        @media only screen and (min-width: 992px) {
+          --line-height: 2.4rem;
+
+          font-size: 1.6rem;
+        }
+      }
+
+      &__excerpt {
+        @media only screen and (min-width: 992px) {
+          -webkit-line-clamp: 1;
+          margin-bottom: 0rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .categories {
+      list-style: none;
+
+      &__link {
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        padding: 0.1rem 0rem;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+
+    .social {
+      &__link {
+        border-color: $color-dark;
+
+        &:hover {
+          background-color: rgba($color-dark, 0.075);
+        }
+      }
+
+      &__icon {
+        fill: $color-dark;
+      }
+    }
+  }
+}

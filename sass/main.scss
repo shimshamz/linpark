@@ -1,0 +1,42 @@
+/*!
+Theme Name: Linpark
+Author: Shameel Mohanlal
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: linpark
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "vendors/swiper";
+
+@import "base/reset";
+// @import "base/typography";
+
+// @import 'layout/navigation';
+// @import 'layout/grid';
+@import "layout/header";
+@import "layout/footer";
+// @import 'layout/sidebar';
+// @import 'layout/forms';
+
+@import "components/button";
+@import "components/post-item";
+@import "components/event-item";
+@import "components/social-icons";
+@import "components/subject-tags";
+@import "components/page-header";
+
+@import "pages/homepage";
+@import "pages/single";
+@import "pages/contact";
+@import "pages/404";
+
+// @import "themes/theme";
+// @import "themes/admin";

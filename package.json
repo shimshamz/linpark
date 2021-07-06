@@ -1,0 +1,15 @@
+{
+  "name": "linpark",
+  "version": "1.0.0",
+  "description": "Website for Linpark High School",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.34.0"
+  },
+  "scripts": {
+    "watch:sass": "sass --watch --style=compressed sass/main.scss style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+/* ========== VARIABLES ========== */
+
+:root {
+  --nav-height: 6rem;
+
+  @media only screen and (min-width: 992px) {
+    --nav-height: 7rem;
+  }
+}
+
+// Colors
+
+$color-blue: #303080;
+$color-red: #cd3331;
+// $color-blue: rgba(#070776, 0.85);
+// $color-red: rgba(#fe0000, 0.8);
+$color-light-grey: #f7f7f7;
+$color-light: #fcfcfc;
+$color-dark: #161616;
