@@ -324,3 +324,57 @@ function raw_time_to_arr($raw_time) {
 	$time = date_format($dateObj, 'H:i');
 	return $time;
 }
+
+// Remove pre-existing and add Social Customizer section 
+function linpark_theme_customize_register( $wp_customize ) {
+	// Remove pre-existing
+	$wp_customize->remove_section('header_image');
+	$wp_customize->remove_panel('widgets');
+	$wp_customize->remove_section('custom_css');	
+	$wp_customize->remove_section('colors');
+	$wp_customize->remove_section('background_image');
+	$wp_customize->remove_section('static_front_page');	 
+	$wp_customize->remove_section('title_tagline');
+	// Add social media section
+	// Facebook
+	$wp_customize->add_setting( 'linpark_facebook_url', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => '',
+		'sanitize_js_callback' => '', // Basically to_json.
+	) );
+	$wp_customize->add_control( 'linpark_facebook_url', array(
+		'type' => 'url',
+		'priority' => 10, // Within the section.
+		'section' => 'linpark_social_media', // Required, core or custom.
+		'label' => __( 'Facebook URL' ),
+	) );
+	// Instagram
+	$wp_customize->add_setting( 'linpark_instagram_url', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => '',
+		'sanitize_js_callback' => '', // Basically to_json.
+	) );
+	$wp_customize->add_control( 'linpark_instagram_url', array(
+		'type' => 'url',
+		'priority' => 10, // Within the section.
+		'section' => 'linpark_social_media', // Required, core or custom.
+		'label' => __( 'Instagram URL' ),
+	) );
+	$wp_customize->add_section( 'linpark_social_media', array(
+		'title' => __( 'Social Media' ),
+		'description' => __( 'Add links to social media pages here' ),
+		'panel' => '', // Not typically needed.
+		'priority' => 220,
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '', // Rarely needed.
+	) );
+}
+add_action( 'customize_register', 'linpark_theme_customize_register' );

@@ -9,6 +9,7 @@
     display: flex;
     align-items: stretch;
     min-height: 225px;
+    height: auto;
 
     @media only screen and (min-width: 768px) {
       min-height: 400px;
@@ -57,6 +58,21 @@
   .swiper-pagination-bullets {
     @media only screen and (min-width: 768px) {
       bottom: 15px;
+    }
+
+    .swiper-pagination-bullet {
+      box-shadow: 0 0 0 1px white;
+
+      @media only screen and (min-width: 768px) {
+        width: 10px;
+        height: 10px;
+      }
+
+      @media only screen and (min-width: 992px) {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+      }
     }
   }
 }
