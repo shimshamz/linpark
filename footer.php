@@ -55,23 +55,39 @@
 											<a href="tel:+27333441544">033 344 1544</a></p>
 										</li>
 									</ul>
-									<div class="social">
-										<a href="#" class="social__link">
-											<svg class="social__icon" aria-hidden="true">
-												<use xlink:href="<?php bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-facebook" />
-											</svg>
-										</a>
-										<a href="#" class="social__link">
-											<svg class="social__icon" aria-hidden="true">
-												<use xlink:href="<?php bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-instagram" />
-											</svg>
-										</a>
-										<!-- <a href="#" class="social__link">
-											<svg class="social__icon" aria-hidden="true">
-												<use xlink:href="<?php //bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-linkedin" />
-											</svg>
-										</a> -->
-									</div>
+									<?php 
+									if (get_theme_mod(linpark_facebook_url) || get_theme_mod(linpark_instagram_url)) {
+									?>
+										<div class="social">
+											<?php 
+											if (get_theme_mod(linpark_facebook_url)) { 
+											?>
+												<a href="#" class="social__link">
+													<svg class="social__icon" aria-hidden="true">
+														<use xlink:href="<?php bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-facebook" />
+													</svg>
+												</a>
+											<?php 
+											} 
+											if (get_theme_mod(linpark_instagram_url)) {
+											?>
+												<a href="#" class="social__link">
+													<svg class="social__icon" aria-hidden="true">
+														<use xlink:href="<?php bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-instagram" />
+													</svg>
+												</a>
+											<?php 
+											} 
+											?>
+											<!-- <a href="#" class="social__link">
+												<svg class="social__icon" aria-hidden="true">
+													<use xlink:href="<?php //bloginfo('stylesheet_directory'); ?>/assets/icons/symbol-defs.svg#icon-linkedin" />
+												</svg>
+											</a> -->
+										</div>
+									<?php 
+									}
+									?>
 								</div>
 							</div>
 						</div>

@@ -59,9 +59,4 @@
 		mask-image: url("<?php bloginfo('stylesheet_directory'); ?>/assets/icons/SVG/chevron-down.svg");
 		background-color: #fcfcfc;
 	}
-	@media only screen and (min-width: 1200px) {
-		.menu-item-has-children > a:after {
-			background-color: #161616;
-		}
-	}
 </style>
