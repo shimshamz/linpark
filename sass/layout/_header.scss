@@ -1,6 +1,8 @@
 /* ========== HEADER ========== */
 
 .header {
+  --link-px: 1.5rem;
+
   .menu-container {
     width: 100%;
     padding: 0;
@@ -57,7 +59,7 @@
           a {
             justify-content: center;
             height: initial;
-            padding: 1.4rem 2.2rem;
+            padding: 1.3rem 2rem;
             color: $color-light;
             border-radius: 50px;
             background-color: $color-blue;
@@ -200,7 +202,7 @@
       position: relative;
 
       @media only screen and (min-width: 1200px) {
-        padding: 1.5rem 2rem;
+        padding: 1.3rem var(--link-px);
         transition: background-color 0.15s;
 
         &:hover {
@@ -225,7 +227,7 @@
     }
 
     & > a {
-      padding-right: 4rem;
+      padding-right: 3.5rem;
     }
 
     & > a:after {
@@ -235,12 +237,12 @@
       height: 28px;
       position: absolute;
       top: 50%;
-      right: 1.5rem;
+      right: 1rem;
       transform: translateY(-60%) scale(0.5);
       z-index: 10;
 
       @media only screen and (min-width: 1200px) {
-        right: 7px;
+        right: 5px;
         transform: translateY(-55%) scale(0.5);
         background-color: #161616;
       }
@@ -266,8 +268,7 @@
 
     .sub-menu {
       @media only screen and (min-width: 1200px) {
-        min-width: calc(100% + 30px);
-        max-width: calc(100% + 50px);
+        width: 20rem;
         position: absolute;
         top: 100%;
         left: 0;
@@ -294,9 +295,11 @@
     list-style: none;
 
     .menu-item a {
-      padding-left: 2rem;
+      padding-left: calc(var(--link-px) + 1rem);
 
       @media only screen and (min-width: 1200px) {
+        padding-left: var(--link-px);
+
         &:hover {
           background-color: rgba(0, 0, 0, 0.15);
         }
@@ -305,10 +308,10 @@
 
     .sub-menu {
       .menu-item a {
-        padding-left: 3rem;
+        padding-left: calc(var(--link-px) + 2rem);
 
         @media only screen and (min-width: 1200px) {
-          padding-left: 2rem;
+          padding-left: var(--link-px);
         }
       }
     }
